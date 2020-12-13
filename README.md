@@ -1,4 +1,4 @@
-# Codetake
+# Codenshare
 
 Codenshare first started off as a react project called **Codetake**. When starting off, I thought that a single page app refers to an app without routing. With that in mind, I tried to build Codetake without the use of any routing. 
 
