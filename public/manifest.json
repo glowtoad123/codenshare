@@ -1,6 +1,6 @@
 {
-  "name": "Codenshare",
-  "short_name": "Codenshare",
+  "name": "Kodenshare",
+  "short_name": "Kodenshare",
   "description": "A webapp that will allow users to display their projects and what techniques, frameworks, and languages they used",
   "lang": "en-US",
   "start_url": "/",

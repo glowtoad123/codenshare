@@ -10,12 +10,12 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head />
-            <title>Codenshare</title>
+            <title>Kodenshare</title>
             <link rel="manifest" href="manifest.json" />
             <meta name="mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-capable" content="yes" />
-            <meta name="application-name" content="Codenshare" />
-            <meta name="apple-mobile-web-app-title" content="Codenshare" />
+            <meta name="application-name" content="Kodenshare" />
+            <meta name="apple-mobile-web-app-title" content="Kodenshare" />
             <meta name="theme-color" content="#2f3e46" />
             <meta name="msapplication-navbutton-color" content="#2f3e46" />
             <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -28,7 +28,7 @@ class MyDocument extends Document {
             <link rel="apple-touch-icon"  sizes="144x144" href="/maskable_icon.png" />
             <link rel="icon"  sizes="192x192" href="/maskable_icon.png" />
             <link rel="apple-touch-icon"  sizes="192x192" href="/maskable_icon.png" />
-            <noscript>Sorry but you must have javascript to use Codenshare</noscript>
+            <noscript>Sorry but you must have javascript to use Kodenshare</noscript>
 
         <body>
           <Main />

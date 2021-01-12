@@ -1,8 +1,8 @@
 # Codetake
 
-Codenshare first started off as a react project called **Codetake**. When starting off, I thought that a single page app refers to an app without routing. With that in mind, I tried to build Codetake without the use of any routing. 
+Kodenshare first started off as a react project called **Codetake**. When starting off, I thought that a single page app refers to an app without routing. With that in mind, I tried to build Codetake without the use of any routing. 
 
-![routing example](https://firebasestorage.googleapis.com/v0/b/alonzoaustin-8314b.appspot.com/o/codenshare%2Fcodetake%2Fnavigation_between_projects.gif?alt=media&token=34bf8565-3855-4d05-8365-85bfcbebf49b)
+![routing example](https://firebasestorage.googleapis.com/v0/b/alonzoaustin-8314b.appspot.com/o/kodenshare%2Fcodetake%2Fnavigation_between_projects.gif?alt=media&token=34bf8565-3855-4d05-8365-85bfcbebf49b)
 
 Codetake worked this way because the Code behind the Navbar looked like this:
 
@@ -124,7 +124,7 @@ export default Components
 
 If a user were to add a project, the user would not be able to see it alongside the other projects until the user refreshed the page.
 
-![adding project](https://firebasestorage.googleapis.com/v0/b/alonzoaustin-8314b.appspot.com/o/codenshare%2Fcodetake%2Fadding_project.gif?alt=media&token=dfde70b5-7d7c-47bf-89a3-5b8e1ded1607)
+![adding project](https://firebasestorage.googleapis.com/v0/b/alonzoaustin-8314b.appspot.com/o/kodenshare%2Fcodetake%2Fadding_project.gif?alt=media&token=dfde70b5-7d7c-47bf-89a3-5b8e1ded1607)
 
 # Codentake
 
@@ -150,6 +150,6 @@ userId.includes("%20") ? (setaltId(userId.split("%20").join(" "))) : console.log
 
 ```
 
-# Codenshare
+# Kodenshare
 
-In addition to cleaner code, Codenshare saw file names and link names that actually made sense. getUrl would no longer be used as I finally understood what **useRouter** actually did. It also solved a problem that prevented new projects to be shown when added to database. This was because instead of using `<Link></Link>` to go to a different page as data is being updated/created, I was able to use `router.push()` at the end of functions to move to the new page after data has been updated/created.
+In addition to cleaner code, Kodenshare saw file names and link names that actually made sense. getUrl would no longer be used as I finally understood what **useRouter** actually did. It also solved a problem that prevented new projects to be shown when added to database. This was because instead of using `<Link></Link>` to go to a different page as data is being updated/created, I was able to use `router.push()` at the end of functions to move to the new page after data has been updated/created.
