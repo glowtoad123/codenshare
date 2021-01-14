@@ -12,12 +12,12 @@ export default function Advpreview(props) {
 
     return (
         <div className={styles.display}>
-            <Link href={`/project?title=${props.id}`}><a><h1 className={styles.displaytitle}><strong>{props.project}</strong></h1></a></Link>
+            <Link href={`/project?title=${props.id}`}><h1 className={styles.displaytitle}><strong>{props.project}</strong></h1></Link>
             <div className={styles.descriptionDiv}><strong >{props.description}</strong></div>
             <br />
             <br />
             
-            <Link href={`/account?title=${props.creator}`}><a className={styles.creatorName}><strong>{props.creator}</strong></a></Link>
+            <Link href={`/account?title=${props.creator}`}><strong>{props.creator}</strong></Link>
             <br />
             <div className={styles.tagDiv}>{props.categories && props.categories.map(category =>                 
                 <Link href={`/found?title=${category}`}>
@@ -34,18 +34,14 @@ export default function Advpreview(props) {
                     id={props.id}
                 />
                 <Link href={`/update?title=${props.id}`}>
-                    <a 
-                        href="/update" 
-                        className={styles.edit}
-                    ><img 
+                    <img 
                         alt="edit"
                         id={props.id} 
                         title={props.description} 
                         name={props.project} 
                         className={styles.edit} 
                         src='/edit.svg' 
-                     />
-                    </a>
+                    />
                 </Link>
             </div>
         </div>
