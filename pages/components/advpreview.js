@@ -17,7 +17,7 @@ export default function Advpreview(props) {
             <br />
             <br />
             
-            <Link href={`/account?title=${props.creator}`}><strong>{props.creator}</strong></Link>
+            <Link href={`/account?title=${props.creator}`}><strong className={styles.creatorName}>{props.creator}</strong></Link>
             <br />
             <div className={styles.tagDiv}>{props.categories && props.categories.map(category =>                 
                 <Link href={`/found?title=${category}`}>

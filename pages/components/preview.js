@@ -18,7 +18,7 @@ export default function Preview(props) {
             <br />
             <br />
             
-            <Link href={`/account?title=${props.creator}`}><strong>{props.creator}</strong></Link>
+            <Link href={`/account?title=${props.creator}`}><strong className={styles.creatorName}>{props.creator}</strong></Link>
             <br />
             <div className={styles.tagDiv}>{props.categories && props.categories.map(category => 
                     <p onClick={settingSelection} className={styles.tags}><strong>{category}</strong></p>
