@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import * as localForage from "localforage"
+import {useSelector} from 'react-redux'
 import Preview from './components/preview'
 import Offlinepreview from './components/offlinepreview'
 import Navbar from './navbar'
@@ -9,6 +10,11 @@ export default function Home(){
     const [projectArray, setProjectArray] =  useState([])
     const [offlineArray, setOfflineArray] = useState([])
     const [networkStatus, setNetworkStatus] = useState(false)
+
+    const loading = useSelector(state => state.loading)
+
+    console.log('loading', loading)
+    console.log('opposite of loading', !loading)
     
     async function getProjects(){
         try {
@@ -55,6 +61,7 @@ export default function Home(){
         <>
             <Navbar />
             {projectArray && offlineArray && projectArray.length === 0 && offlineArray.length === 0 && <LinearProgress />}
+            {loading && <div className="loading"><LinearProgress /></div>}
             {projectArray && projectArray.length !== 0 ? projectArray.map(
                 (project, index) => <Preview 
                     id={project.ref['@ref'].id}

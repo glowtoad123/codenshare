@@ -3,6 +3,8 @@ import { useRouter } from 'next/router'
 import crypto from 'crypto'
 import Navbar from './navbar'
 import * as localForage from "localforage"
+import {useSelector} from 'react-redux'
+import {setLoadingCondition} from '../actions'
 import Advpreview from './components/advpreview'
 import Offlinepreview from './components/offlinepreview'
 import styles from './css/account.module.css'
@@ -19,6 +21,8 @@ export default function Myaccount(){
     const [projectsArray, setProjectsArray] = useState([])
     const [networkStatus, setNetworkStatus] = useState(false)
     const [offlineArray, setOfflineArray] = useState([])
+
+    const loading = useSelector(state => state.loading)
 
 
     async function retreivingSavedCredentials(){
@@ -139,6 +143,7 @@ export default function Myaccount(){
         <Navbar />
         {yourKey === receivedKey && networkStatus ?
             <>
+                {loading && <div className="loading"><LinearProgress /></div>}
                 <div className={styles.head}>
                     <h1 className={styles.displaytitle}><strong>{userName}</strong></h1>
                     <img alt="edit" src="/edit.svg" className={styles.save} onClick={updateName}/>

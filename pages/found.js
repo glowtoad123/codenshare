@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import { Router, useRouter } from 'next/router'
 import * as localForage from "localforage"
+import {useSelector} from 'react-redux'
+import {setLoadingCondition} from '../actions'
 import Preview from './components/preview'
 import Navbar from './navbar'
 import styles from './css/project.module.css'
@@ -15,6 +17,8 @@ export default function found({searchedInfo}){
     const [foundStatus, setFoundStatus] = useState(false)
 
     const router = useRouter()
+
+    const loading = useSelector(state => state.loading)
 
     const possibleUrl = router.pathname
 
@@ -82,6 +86,7 @@ export default function found({searchedInfo}){
     return(
         <>
         <Navbar />
+        {loading && <div className="loading"><LinearProgress /></div>}
         <h1 className={styles.textHead} style={{margin: "0"}}>Search Results</h1>
         <br />
         {queriedList && queriedList.length === 0 && <LinearProgress />}

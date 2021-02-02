@@ -2,12 +2,14 @@ import React, {useState, useEffect} from 'react'
 import { useRouter } from 'next/router'
 import Navbar from './navbar'
 import Link from 'next/link'
+import {useSelector, useDispatch} from 'react-redux'
 import styles from './css/project.module.css'
 import * as localForage from "localforage"
 import { LinearProgress } from '@material-ui/core'
 import hljs from 'highlight.js'
 import 'markdown-it'
 import MarkdownIt from 'markdown-it'
+import { setLoadingCondition } from '../actions'
 
 export default function Project({id}) {
 
@@ -21,6 +23,9 @@ export default function Project({id}) {
     const [creator, setCreator] = useState("")
 
     const router = useRouter()
+
+    const loading = useSelector(state => state.loading)
+    const dispatch = useDispatch()
 
     hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'));
 
@@ -128,6 +133,7 @@ export default function Project({id}) {
     }
 
     async function deleteProject() {
+        dispatch(setLoadingCondition())
         const res = await fetch("api/deleteProject", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
@@ -145,13 +151,14 @@ export default function Project({id}) {
         <>
             <Navbar />
         {receivedKey && receivedKey === "" && <LinearProgress />}
+        {loading && <div className="loading"><LinearProgress /></div>}
             <div className={styles.userDisplay}>
                 <h1 className={styles.displaytitle}>
                     <strong>{projectData.Project_Title}</strong>
                 </h1>
                 <p className={styles.description}><strong>{projectData.Description}</strong></p>
                 {yourKey && receivedKey && yourKey === receivedKey && projectData && <div className={styles.control}>
-                    <Link href={`/update?title=${id}`}><a>
+                    <Link href={`/update?title=${id}`}><a onClick={(() => dispatch(setLoadingCondition()))}>
                         <svg id={styles.svg} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
                           <path fill-rule="evenodd" d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
                         </svg>
@@ -169,7 +176,7 @@ export default function Project({id}) {
                 </div>
                 <br />
                 <br />
-                <Link href={`/account?title=${projectData.Creator}`}><a className={styles.creatorName}><strong>{projectData.Creator}</strong></a></Link>
+                <Link href={`/account?title=${projectData.Creator}`}><a onClick={(() => dispatch(setLoadingCondition()))} className={styles.creatorName}><strong>{projectData.Creator}</strong></a></Link>
                 <br />
                 <a className={styles.repository} href={projectData.Repository}>{projectData.Repository}</a>
                 <br />

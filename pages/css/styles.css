@@ -143,6 +143,14 @@ option {
   border-radius: 0 6px 6px 0;
 }
 
+.loading {
+  position: fixed;
+  top: 0;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  z-index: 3;
+}
+
 svg {
   color: #354f52;
   width: 32px;

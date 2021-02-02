@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import * as localForage from "localforage"
+import {useSelector, useDispatch} from 'react-redux'
+import {setLoadingCondition} from "../../actions"
 import styles from '../css/search.module.css'
 import dynamic from 'next/dynamic'
 import 'react-bootstrap'
@@ -12,6 +14,10 @@ export default function Search() {
     const router = useRouter()
 
     const thisUrl = router.pathname
+
+    const loading = useSelector(state => state.loading)
+
+    const dispatch = useDispatch()
 
     const [searchValue, setsearchValue] = useState("")
     const [searchTagsList, setsearchTagsList] = useState([])
@@ -40,6 +46,7 @@ export default function Search() {
     }
 
     function settingFoundStatus(){
+        dispatch(setLoadingCondition())
         localForage.setItem("foundStatus", true)
     }
     const categorySearchList = searchTagsList.join(" ")
@@ -47,6 +54,7 @@ export default function Search() {
 
     return (
         thisUrl === '/found' ? <div className={styles.search}>
+            {loading && <div className="loading"><LinearProgress /></div>}
             <div className={styles.searchContainer}>
                 {/* <input 
                     type="search" 
