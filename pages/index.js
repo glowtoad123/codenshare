@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import Head from 'next/head'
 import * as localForage from "localforage"
 import {useSelector} from 'react-redux'
 import Preview from './components/preview'
@@ -59,6 +60,9 @@ export default function Home(){
     
     return(
         <>
+            <Head>
+                <meta name="google-site-verification" content="TloKq3MlBeJNgquYIRGjnWw5v8k4DesIKBCuNUIcLJc" />
+            </Head>
             <Navbar />
             {projectArray && offlineArray && projectArray.length === 0 && offlineArray.length === 0 && <LinearProgress />}
             {loading && <div className="loading"><LinearProgress /></div>}
