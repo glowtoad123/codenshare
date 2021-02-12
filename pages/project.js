@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Navbar from './navbar'
 import Link from 'next/link'
@@ -149,6 +150,10 @@ export default function Project({id}) {
 
     return(
         <>
+            <Head>
+                <title>{projectData.Project_Title}</title>
+                <meta name="Description" content={projectData.Description} />
+            </Head>
             <Navbar />
         {receivedKey && receivedKey === "" && <LinearProgress />}
         {loading && <div className="loading"><LinearProgress /></div>}
