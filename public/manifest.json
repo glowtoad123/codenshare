@@ -5,17 +5,17 @@
   "lang": "en-US",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#cad2c5",
+  "background_color": "#ffffff",
   "theme_color": "#2f3e46",
   "icons": [
     {
-      "src": "/maskable_icon.png",
+      "src": "/paidfavicon.jpg",
       "sizes": "196x196",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/maskable_icon.png",
+      "src": "/paidfavicon.jpg",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

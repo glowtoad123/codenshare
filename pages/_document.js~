@@ -22,12 +22,12 @@ class MyDocument extends Document {
             <meta name="msapplication-starturl" content="/" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-            <link rel="icon"  sizes="512x512" href="/maskable_icon.png" />
-            <link rel="apple-touch-icon"  sizes="512x512" href="/maskable_icon.png" />
-            <link rel="icon"  sizes="144x144" href="/maskable_icon.png" />
-            <link rel="apple-touch-icon"  sizes="144x144" href="/maskable_icon.png" />
-            <link rel="icon"  sizes="192x192" href="/maskable_icon.png" />
-            <link rel="apple-touch-icon"  sizes="192x192" href="/maskable_icon.png" />
+            <link rel="icon"  sizes="512x512" href="/paidfavicon.jpg" />
+            <link rel="apple-touch-icon"  sizes="512x512" href="/paidfavicon.jpg" />
+            <link rel="icon"  sizes="144x144" href="/paidfavicon.jpg" />
+            <link rel="apple-touch-icon"  sizes="144x144" href="/paidfavicon.jpg" />
+            <link rel="icon"  sizes="192x192" href="/paidfavicon.jpg" />
+            <link rel="apple-touch-icon"  sizes="192x192" href="/paidfavicon.jpg" />
             <link rel="stylesheet" href="./styles.css" />
 
         <body>

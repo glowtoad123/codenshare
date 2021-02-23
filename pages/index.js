@@ -62,6 +62,7 @@ export default function Home(){
         <>
             <Head>
                 <meta name="google-site-verification" content="TloKq3MlBeJNgquYIRGjnWw5v8k4DesIKBCuNUIcLJc" />
+                <title>Kodenshare</title>
             </Head>
             <Navbar />
             {projectArray && offlineArray && projectArray.length === 0 && offlineArray.length === 0 && <LinearProgress />}
