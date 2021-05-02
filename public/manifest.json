@@ -1,6 +1,6 @@
 {
-  "name": "Kodenshare",
-  "short_name": "Kodenshare",
+  "name": "Projare",
+  "short_name": "Projare",
   "description": "A webapp that will allow users to display their projects and what techniques, frameworks, and languages they used",
   "lang": "en-US",
   "start_url": "/",
@@ -9,13 +9,13 @@
   "theme_color": "#2f3e46",
   "icons": [
     {
-      "src": "/paidfavicon.jpg",
+      "src": "/projareexp.svg",
       "sizes": "196x196",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/paidfavicon.jpg",
+      "src": "/projareexp.svg",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

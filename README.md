@@ -1,6 +1,6 @@
 # Codetake
 
-Kodenshare first started off as a react project called **Codetake**. When starting off, I thought that a single page app refers to an app without routing. With that in mind, I tried to build Codetake without the use of any routing. 
+Projare first started off as a react project called **Codetake**. When starting off, I thought that a single page app refers to an app without routing. With that in mind, I tried to build Codetake without the use of any routing. 
 
 ![routing example](https://firebasestorage.googleapis.com/v0/b/alonzoaustin-8314b.appspot.com/o/kodenshare%2Fcodetake%2Fnavigation_between_projects.gif?alt=media&token=34bf8565-3855-4d05-8365-85bfcbebf49b)
 
@@ -150,6 +150,6 @@ userId.includes("%20") ? (setaltId(userId.split("%20").join(" "))) : console.log
 
 ```
 
-# Kodenshare
+# Projare
 
-In addition to cleaner code, Kodenshare saw file names and link names that actually made sense. getUrl would no longer be used as I finally understood what **useRouter** actually did. It also solved a problem that prevented new projects to be shown when added to database. This was because instead of using `<Link></Link>` to go to a different page as data is being updated/created, I was able to use `router.push()` at the end of functions to move to the new page after data has been updated/created.
+In addition to cleaner code, Projare saw file names and link names that actually made sense. getUrl would no longer be used as I finally understood what **useRouter** actually did. It also solved a problem that prevented new projects to be shown when added to database. This was because instead of using `<Link></Link>` to go to a different page as data is being updated/created, I was able to use `router.push()` at the end of functions to move to the new page after data has been updated/created.
