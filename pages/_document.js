@@ -22,12 +22,12 @@ class MyDocument extends Document {
             <meta name="msapplication-starturl" content="/" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
             <meta name="Description" content="this is a project that allows users to share their projects, what they used to create their projects, and the status of their projects." />
-            <link rel="icon"  sizes="512x512" href="/projare.png" />
-            <link rel="apple-touch-icon"  sizes="512x512" href="/projare.png" />
-            <link rel="icon"  sizes="144x144" href="/projare.png" />
-            <link rel="apple-touch-icon"  sizes="144x144" href="/projare.png" />
-            <link rel="icon"  sizes="192x192" href="/projare.png" />
-            <link rel="apple-touch-icon"  sizes="192x192" href="/projare.png" />
+            <link rel="icon"  sizes="512x512" href="/projareexp.png" />
+            <link rel="apple-touch-icon"  sizes="512x512" href="/projareexp.png" />
+            <link rel="icon"  sizes="144x144" href="/projareexp.png" />
+            <link rel="apple-touch-icon"  sizes="144x144" href="/projareexp.png" />
+            <link rel="icon"  sizes="192x192" href="/projareexp.png" />
+            <link rel="apple-touch-icon"  sizes="192x192" href="/projareexp.png" />
             <noscript>Sorry but you must have javascript to use Projare</noscript>
 
         <body>
