@@ -9,13 +9,13 @@
   "theme_color": "#2f3e46",
   "icons": [
     {
-      "src": "/projare.png",
+      "src": "/projareexp196.png",
       "sizes": "196x196",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/projare.png",
+      "src": "/projareexp512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
