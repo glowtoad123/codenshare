@@ -12,7 +12,7 @@
    viewBox="0 0 9.5249998 9.5250003"
    version="1.1"
    id="svg1892"
-   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
    sodipodi:docname="navpreview.svg">
   <defs
      id="defs1886">
@@ -121,7 +121,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="13.416667"
-     inkscape:cx="3.6521743"
+     inkscape:cx="16.670808"
      inkscape:cy="18"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -156,7 +156,7 @@
      id="layer1"
      transform="translate(0,-287.47498)">
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#4b283c;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.995413"
+       style="fill:#2f3e46;fill-opacity:1;stroke:#4b283c;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.995413"
        id="rect2459"
        width="9.5249996"
        height="9.5249996"
@@ -165,7 +165,7 @@
        ry="1.1635094"
        rx="1.1635094" />
     <rect
-       style="fill:#2f3e46;fill-opacity:1;stroke:#4b283c;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99541285;filter:url(#filter2619)"
+       style="fill:#ffffff;fill-opacity:1;stroke:#4b283c;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99541285;filter:url(#filter2619)"
        id="rect2461"
        width="5.7583852"
        height="1.5381987"
@@ -175,7 +175,7 @@
        rx="0.65077639" />
     <rect
        rx="0.65077633"
-       style="fill:#2f3e46;fill-opacity:1;stroke:#4b283c;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99541285;filter:url(#filter2607)"
+       style="fill:#ffffff;fill-opacity:1;stroke:#4b283c;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99541285;filter:url(#filter2607)"
        id="rect2461-5"
        width="5.7583852"
        height="1.5381987"
@@ -184,7 +184,7 @@
        ry="0.65077633" />
     <rect
        rx="0.65077627"
-       style="fill:#2f3e46;fill-opacity:1;stroke:#4b283c;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99541285;filter:url(#filter2595)"
+       style="fill:#ffffff;fill-opacity:1;stroke:#4b283c;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99541285;filter:url(#filter2595)"
        id="rect2461-5-6"
        width="5.7583852"
        height="1.5381987"

@@ -46,7 +46,7 @@ export default function Home(){
 
     async function getOfflineData(){
 
-        var data = await localForage.getItem("projectList").then(project => project)
+        var data = await localForage.getItem("projectList").then(project => project).catch(error => console.log({error: error}))
         setOfflineArray(data)
         console.log("offline data", data)
         setNetworkStatus(true)
