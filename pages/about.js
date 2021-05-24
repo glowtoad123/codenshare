@@ -1,10 +1,15 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
 import styles from './css/about.module.css'
 
 export default function About() {
     return (
-        <div>
+        <>
+            <Head>
+            <title>Projare | Share your Projects </title>
+            <meta name="Description" content="this is a project that allows users to share their projects, what they used to create their projects, and the status of their projects." />
+            </Head>
             <div className={styles.titleContainer}>
                 <img className={styles.titlePic} src="/projareexp.svg" alt="Projare icon" />
                 <h1 className={styles.titleText}>Projare</h1>
@@ -21,8 +26,8 @@ export default function About() {
             <br />
 
             <div className={styles.footerContainer}>
-                <h1 className={styles.footerText}>Made using NextJS + MongoDB + Vercel</h1>
+                <h2 className={styles.footerText}>Made using NextJS + MongoDB + Vercel</h2>
             </div>
-        </div>
+        </>
     )
 }
