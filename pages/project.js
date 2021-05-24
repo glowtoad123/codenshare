@@ -201,14 +201,14 @@ export default function Project({data, id}) {
                 ) }
                 <br />
                 {roadmap && roadmap.length > 0 && <div>
-                    <h1 className={styles.textHead}><strong>Roadmap</strong></h1>
+                    <h2 className={styles.textHead}><strong>Roadmap</strong></h2>
                     <br />
                     {roadmap.map(each => <p className={styles.goal}><strong>{each}</strong></p>)}
                     <br />
                     <br />
                     <br />
                 </div>}
-                <h1 className={styles.textHead}><strong>Categories</strong></h1>
+                <h2 className={styles.textHead}><strong>Categories</strong></h2>
                 <br />
                 {Categories.length > 0 && Categories.map(category => 
                     <Link href={`/found?title=${category}`}>
@@ -234,7 +234,7 @@ export default function Project({data, id}) {
             </div>
             {projectData === {} && 
                 <div>
-                    <h1>Either it's loading or you are not connected to the internet</h1>
+                    <h2>Either it's loading or you are not connected to the internet</h2>
                 </div>
             }
         </>
