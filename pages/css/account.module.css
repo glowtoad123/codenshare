@@ -1,3 +1,22 @@
+.heading {
+    background: white;
+    border: none;
+    border-radius: 12px;
+    width: max-content;
+    margin: auto;
+    margin-bottom: 10px;
+    display: flex;
+    box-shadow: 0 25.6px 57.6px 0 rgba(0, 0, 0, .22), 0 4.8px 14.4px 0 rgba(0, 0, 0, .18);
+}
+
+.headingText {
+    font-size: 5vw;
+    color: #2f3e46;
+    padding: 10px;
+    text-align: center;
+    
+}
+
 .head {
     background: #CAD2C5;
     border-radius: 12px;
@@ -17,7 +36,7 @@
 
 .displaytitle {
     background-color: #2f3e46;
-    box-shadow: 0 25.6px 57.6px 0 rgba(0, 0, 0, .22), 0 4.8px 14.4px 0 rgba(0, 0, 0, .18),;
+    box-shadow: 0 25.6px 57.6px 0 rgba(0, 0, 0, .22), 0 4.8px 14.4px 0 rgba(0, 0, 0, .18);
     color: white;
     display: inline-block;
     z-index: 0;
