@@ -6,22 +6,31 @@ import Link from 'next/link'
 import {useSelector, useDispatch} from 'react-redux'
 import styles from './css/project.module.css'
 import * as localForage from "localforage"
+import faunadb, { query as q } from "faunadb"
 import { LinearProgress } from '@material-ui/core'
 import hljs from 'highlight.js'
 import 'markdown-it'
 import MarkdownIt from 'markdown-it'
 import { setLoadingCondition } from '../actions'
 
-export default function Project({id}) {
+export default function Project({data, id}) {
 
-    const [yourKey, setYourKey] = useState("")
-    const [receivedKey, setReceivedKey] = useState("")
+    /*     
     const [projectData, setProjectData] = useState({})
     const [linkList, setLinkList] = useState([])
     const [roadmap, setRoadmap] = useState([])
     const [Categories, setCategories] = useState([])
     const [update, setUpdate] = useState([])
-    const [creator, setCreator] = useState("")
+    const [creator, setCreator] = useState("") */
+    
+    const projectData = data
+    const linkList = data.Links
+    const roadmap = data.roadmap
+    const Categories = data.Categories
+    const update = data.Update
+    const creator = data.Creator
+    const [receivedKey, setReceivedKey] = useState("")
+    const [yourKey, setYourKey] = useState("")
 
     const router = useRouter()
 
@@ -46,10 +55,10 @@ export default function Project({id}) {
 
     hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'));
 
-    async function getProject(theId){
+    async function getProject(){
 
         try{
-            const res = await fetch("api/getSingleProject", {
+            /* const res = await fetch("api/getSingleProject", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({id: theId})
@@ -62,7 +71,7 @@ export default function Project({id}) {
             setRoadmap(data.Roadmap)
             setCategories(data.Categories)
             setUpdate(data.Update)
-            setCreator(data.Creator)
+            setCreator(data.Creator) */
 
             const userRes = await fetch('api/checkUser', {
                 method: "POST",
@@ -115,8 +124,7 @@ export default function Project({id}) {
     } */
     
     useEffect(() => {
-        console.log(id)
-        getProject(id)
+        getProject()
         
     }, [])
     
@@ -233,10 +241,29 @@ export default function Project({id}) {
     )
 }
 
-
 export async function getServerSideProps(context){
+    var client = new faunadb.Client({ secret: process.env.NEXT_FAUNA_KEY });
+        const dbs = await client.query(
+            q.Get(
+                q.Ref(
+                    q.Collection("Projects"), 
+                    context.query.title
+                )
+            )
+        )
+        return {
+            props: {
+                data: dbs.data,
+                id: context.query.title
+            }
+        }
+        res.status(200).json(dbs.data)
+}
+
+
+/* export async function getServerSideProps(context){
     
     return {props: {
         id: context.query.title
     }}
-}
+} */
