@@ -159,8 +159,15 @@ export default function Project({data, id}) {
     return(
         <>
             <Head>
-                <title>{projectData.Project_Title}</title>
-                <meta name="Description" content={projectData.Description} />
+                <title>{projectData.Project_Title.length >= 15 && projectData.Project_Title.length <= 65 ? projectData.Project_Title ?
+                        projectData.Project_Title.length < 15 : projectData.Project_Title + "| project by " + projectData.Creator ?
+                        projectData.Project_Title.length > 65 : projectData.Project_Title.slice(0, 65) : "Projare"
+                       }
+                </title>
+                <meta name="Description" content={projectData.Description.length >= 15 && projectData.Description.length <= 65 ? projectData.Description ?
+                        projectData.Descripton.length < 15 : projectData.Description + "| project by " + projectData.Creator ?
+                        projectData.Descripton.length > 65 : projectData.Description.slice(0, 65) : "Projare"
+                } />
             </Head>
             <Navbar />
         {receivedKey && receivedKey === "" && <LinearProgress />}
