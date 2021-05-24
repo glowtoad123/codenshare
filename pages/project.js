@@ -165,8 +165,8 @@ export default function Project({data, id}) {
                        }
                 </title>
                 <meta name="Description" content={projectData.Description.length >= 15 && projectData.Description.length <= 65 ? projectData.Description :
-                        projectData.Descripton.length < 15 ? projectData.Description + "| project by " + projectData.Creator :
-                        projectData.Descripton.length > 65 ? projectData.Description.slice(0, 65) : "Projare"
+                        projectData.Description.length < 15 ? projectData.Description + "| project by " + projectData.Creator :
+                        projectData.Description.length > 65 ? projectData.Description.slice(0, 65) : "Projare"
                 } />
             </Head>
             <Navbar />
