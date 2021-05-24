@@ -12,6 +12,7 @@ class MyDocument extends Document {
         <Head />
             <title>Projare</title>
             <link rel="manifest" href="manifest.json" />
+            <meta name="msvalidate.01" content="B913091A1850ED2E837CF410DA656F3D" />
             <meta name="mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="application-name" content="Projare" />
