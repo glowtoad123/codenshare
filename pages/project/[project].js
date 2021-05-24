@@ -196,7 +196,7 @@ export default function Project({data, id}) {
                 </div>
                 <br />
                 <br />
-                <Link href={`/account?title=${projectData.Creator}`}><a onClick={(() => dispatch(setLoadingCondition()))} className={styles.creatorName}><strong>{projectData.Creator}</strong></a></Link>
+                <Link href={`/account/${projectData.Creator}`}><a onClick={(() => dispatch(setLoadingCondition()))} className={styles.creatorName}><strong>{projectData.Creator}</strong></a></Link>
                 <br />
                 <a className={styles.repository} href={projectData.Repository}>{projectData.Repository}</a>
                 <br />

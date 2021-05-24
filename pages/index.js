@@ -61,7 +61,7 @@ export default function Home(){
     return(
         <>
             <Head>
-                <meta name="google-site-verification" content="TloKq3MlBeJNgquYIRGjnWw5v8k4DesIKBCuNUIcLJc" />
+                {/* <meta name="google-site-verification" content="TloKq3MlBeJNgquYIRGjnWw5v8k4DesIKBCuNUIcLJc" /> */}
                 <meta name="Description" content="this is a project that allows users to share their projects, what they used to create their projects, and the status of their projects." />
                 <title>Projare</title>
             </Head>
