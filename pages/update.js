@@ -347,7 +347,7 @@ export default function Update({projectId}){
                                 <div className={styles.update}>
                                     <img 
                                         alt="delete"
-                                        src="/delete.svg"
+                                        src="/trashprojare.svg"
                                         className={styles.delete}
                                         onClick={() => removeUpdate(index)}
                                     />

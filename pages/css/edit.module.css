@@ -164,6 +164,8 @@
     cursor: pointer;
     display: flex;
     justify-self: end;
+    cursor: pointer;
+    margin: auto;
 }
 
 .updateList {

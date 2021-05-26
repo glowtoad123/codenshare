@@ -18,13 +18,14 @@
 }
 
 .head {
-    background: #CAD2C5;
+    background: white;
     border-radius: 12px;
     width: max-content;
     margin: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
+    box-shadow: 0 25.6px 57.6px 0 rgba(0, 0, 0, .22), 0 4.8px 14.4px 0 rgba(0, 0, 0, .18);
 }
 
 .head>img {
@@ -35,9 +36,8 @@
 }
 
 .displaytitle {
-    background-color: #2f3e46;
-    box-shadow: 0 25.6px 57.6px 0 rgba(0, 0, 0, .22), 0 4.8px 14.4px 0 rgba(0, 0, 0, .18);
-    color: white;
+    color: #354f52;
+    padding: 10px;
     display: inline-block;
     z-index: 0;
     border-radius: 0 6px 6px 0;
@@ -52,4 +52,14 @@
     margin-left: 20px;
     vertical-align: middle;
     margin-left: 20px;
+    cursor: pointer;
+    fill: #354f52;
+}
+
+.save:hover {
+    fill: #2a3e46
+}
+
+.save:active {
+    fill: #1e2c2e
 }

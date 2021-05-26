@@ -45,7 +45,7 @@ export default function Advpreview(props) {
                         title={props.description} 
                         name={props.project} 
                         className={styles.edit} 
-                        src='/edit.svg' 
+                        src='/pencilprojarecolor.svg' 
                     />
                 </Link>
             </div>
