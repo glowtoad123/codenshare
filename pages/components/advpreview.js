@@ -33,7 +33,7 @@ export default function Advpreview(props) {
                 <img 
                     alt="alt"
                     name={props.project} 
-                    src="/delete.svg" 
+                    src="/trashprojare.svg" 
                     className={styles.delete} 
                     onClick={props.delete}
                     id={props.id}
