@@ -22,6 +22,7 @@ class MyDocument extends Document {
             <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
             <meta name="msapplication-starturl" content="/" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+            <meta name="keywords" content="projare.site, projare, projects, code,"></meta>
             <link rel="icon"  sizes="512x512" href="/projareexp512.png" />
             <link rel="apple-touch-icon"  sizes="512x512" href="/projareexp.png" />
             <link rel="icon"  sizes="144x144" href="/projareexp.svg" />
