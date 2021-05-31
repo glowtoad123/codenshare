@@ -85,7 +85,7 @@ export default function Home(){
                     categories={project.data.Categories}
                 />)
             }
-            <p>Favicon made by <a style={{color: '#2F3E46'}} href="https://www.fiverr.com/pesendesen">Pesendesen</a></p>
+            {/* <p>Favicon made by <a style={{color: '#2F3E46'}} href="https://www.fiverr.com/pesendesen">Pesendesen</a></p> */}
         </>
     )
 }
