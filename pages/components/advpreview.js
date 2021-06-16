@@ -4,6 +4,8 @@ import * as localForage from "localforage"
 import {useSelector, useDispatch} from 'react-redux'
 import {setLoadingCondition} from '../../actions'
 import styles from '../css/preview.module.css'
+import Trash from '../../public/trashprojare.svg'
+import Pencil from '../../public/pencilprojarecolor.svg'
 
 export default function Advpreview(props) {
 
@@ -30,22 +32,20 @@ export default function Advpreview(props) {
                 </Link>
             )}</div>
             <div className={styles.projectFooter}>
-                <img 
-                    alt="alt"
-                    name={props.project} 
-                    src="/trashprojare.svg" 
+                <Trash 
+                    alt="trash"
+                    name={props.project}
                     className={styles.delete} 
                     onClick={props.delete}
                     id={props.id}
                 />
                 <Link href={`/update?title=${props.id}`}>
-                    <img 
+                    <Pencil
                         alt="edit"
                         id={props.id} 
                         title={props.description} 
                         name={props.project} 
-                        className={styles.edit} 
-                        src='/pencilprojarecolor.svg' 
+                        className={styles.edit}
                     />
                 </Link>
             </div>

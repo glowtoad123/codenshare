@@ -153,18 +153,20 @@ option {
 }
 
 svg {
-  color: #354f52;
+  /* color: #354f52; */
   width: 32px;
   height: 32px;
   margin: 15px;
+  cursor: pointer;
+  fill: #354f52;
 }
 
 svg:hover {
-  color: #2a3e41;
+  fill: #2a3e41;
 }
 
 svg:active {
-  color:  #1e2c2e
+  fill:  #1e2c2e
 }
 
 .editor {

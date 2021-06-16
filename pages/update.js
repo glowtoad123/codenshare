@@ -5,6 +5,7 @@ import styles from './css/edit.module.css'
 import * as localForage from "localforage"
 import { LinearProgress } from '@material-ui/core'
 import dynamic from 'next/dynamic'
+import Trash from '../public/trashprojare.svg'
 
 const CodeMirror = dynamic(() => {
     import('codemirror/mode/xml/xml')
@@ -345,9 +346,8 @@ export default function Update({projectId}){
                         <div className={styles.updateList}>
                             {updateList && updateList.map((current, index) => {return (
                                 <div className={styles.update}>
-                                    <img 
+                                    <Trash 
                                         alt="delete"
-                                        src="/trashprojare.svg"
                                         className={styles.delete}
                                         onClick={() => removeUpdate(index)}
                                     />

@@ -4,6 +4,14 @@ const withMDX = require('@next/mdx')({
 })
 
 module.exports = withPWA({
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"]
+    });
+
+    return config;
+  },
   pwa: {
     dest: 'public',
     register: true,
